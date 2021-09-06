@@ -15,12 +15,12 @@ function preload(){
 function setup() {
   createCanvas(400, 400);
   
-  //creating background
+  //crear fondo
   scene = createSprite(0,0,400,400);
   scene.addImage(backgroundImage);
   scene.scale = 2.5
   
-  // creating bow to shoot arrow
+  //crear arco para disparar las flechas
   bow = createSprite(380,220,20,50);
   bow.addImage(bowImage); 
   bow.scale = 1;
@@ -29,34 +29,34 @@ function setup() {
 
 function draw() {
  background(0);
-  // moving ground
+  //mover el fondo
     scene.velocityX = -3 
 
     if (scene.x < 0){
       scene.x = scene.width/2;
     }
   
-  //moving bow
+  //mover el arco
   bow.y = World.mouseY
   
-   // release arrow when space key is pressed
+   //liberar la flecha al presionar la barra espaciadora
   if (keyDown("space")) {
     createArrow();
     
   }
   
-  //change the value of the random balloon to 4 
+  //cambiar el valor de los globos aleatorios a 4 
   var select_balloon = Math.round(random(1,1));
   
   if (World.frameCount % 100 == 0) {
    switch(select_balloon){
-    case 1: //call the redballoon
+    case 1: //llama a redballoon (globo rojo)
     break;
-    case 2://call the blueballoon
+    case 2://llama a blueballoon (globo azul)
     break;
-    case 3://call the greenballoon
+    case 3://llama a greenballoon (globo verde)
     break;
-    case 4://call the pinkballoon
+    case 4://llama a pinkballoon (globo rosa)
 break;
 
   }}
@@ -65,7 +65,7 @@ break;
 }
 
 
-// Creating  arrows for bow
+//crear flechas para el arco
  function createArrow() {
   var arrow= createSprite(100, 100, 60, 10);
   arrow.addImage(arrowImage);
@@ -87,22 +87,22 @@ function redBalloon() {
 }
 
 function blueBalloon() {
-  //createSprite for the balloon 
-  //addImage for the  balloon
-  //add velocity to make the balloon move
-  //change the scale of the balloon
-  //add the lifetime of the balloon}
+  //usar createSprite (crear sprite) para el globo 
+  //usar addImage (agregar imagen) para el globo
+  //agregar velocidad para hacer que se mueva el globo
+  //cambiar la escala del globo
+  //agregar lifetime (ciclo de vida) al globo
 
 function greenBalloon() {
-  //createSprite for the balloon 
-  //addImage for the  balloon
-  //add velocity to make the balloon move
-  //change the scale of the balloon
-  //add the lifetime of the balloon}
+  //usar createSprite para el globo 
+  //usar addImage para el globo
+  //agregar velocidad para hacer que se mueva el globo
+  //cambiar la escala del globo
+  //agregar lifetime (ciclo de vida) al globo
 
 function pinkBalloon() {
-  //createSprite for the balloon 
-  //addImage for the  balloon
-  //add velocity to make the balloon move
-  //change the scale of the balloon
-  //add the lifetime of the balloon}
+  //usar createSprite para el globo 
+  //usar addImage para el globo
+  //agregar velocidad para hacer que se mueva el globo
+  //cambiar la escala del globo
+  //agregar lifetime (ciclo de vida) al globo
